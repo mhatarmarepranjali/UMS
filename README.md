@@ -1,59 +1,32 @@
-# CodeIgniter 4 Framework 1
+# User Management Form  
 
-## What is CodeIgniter?
+## Created Three pages for Add,Edit,View Information
+## View Pages Name :
+- Main Page name is :welcome_message.php
+- View page Name: view_user.php
+- Edit page Name :edit_user.php
+- Export PDF page Name: export_pdf.php
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## Controller Name:
+Home.php
+# Below is the function name from controller:
+- When Click to submit button for adding the data the function name is  :store
+- When Click on edit Icon from table will redirected to edit screen the name is : edituser
+- When Updated the form :update
+- If you want to deleted the user info then call function : delete
+- If you want to export the data using excel : exportToExcel
+- If you want to export the data using pdf : exportToPDF
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## Models Name:
+User.php
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+I have Design bootstrap 5 form with user details. 
+First Name,Last Name,Email,Date,Gender,Address,Profile pic with jquery validations.
 
-The user guide corresponding to the latest version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+## Design table to showing the user data.
+Added icons in action column and redirected to view page and edit page.
 
-## Important Change with index.php
-
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
-
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Contributing
-
-We welcome contributions from the community.
-
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
-
-## Server Requirements
-
-PHP version 7.4 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> **Warning**
-> The end of life date for PHP 7.4 was November 28, 2022. If you are
-> still using PHP 7.4, you should upgrade immediately. The end of life date
-> for PHP 8.0 will be November 26, 2023.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+## Added Export to Excel Functionality using Spreadsheet.
+## Added Export to PDF Functionality using Mpdf.
+## Created database  Database name : 'dbsymphony'.
+## Created table in database  Database name : 'users' and added columns in this for store the user data and updated it.
